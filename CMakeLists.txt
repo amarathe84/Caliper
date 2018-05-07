@@ -258,6 +258,12 @@ if (WITH_SAMPLER)
   endif()
 endif()
 
+set(CMAKE_C_FLAGS "${CMAKE_C_FLAGS} -DDEBUGLEVEL=2")
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DDEBUGLEVEL=2")
+
+list(APPEND CALIPER_EXTERNAL_LIBS "-fopenmp")
+list(APPEND CALIPER_EXTERNAL_LIBS "-lgeopm -lmsr -lunwind -lunwind-x86_64 -lmd5")
+list(APPEND CALIPER_EXTERNAL_LIBS "-L/g/g92/marathe1/geopm/install-ecp/lib/ -L/g/g92/marathe1/catalyst/local/lib")
 # Create a config header file
 configure_file(
   ${PROJECT_SOURCE_DIR}/caliper-config.h.in
