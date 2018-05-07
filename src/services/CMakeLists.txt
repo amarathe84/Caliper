@@ -1,5 +1,8 @@
 # A macro to include service module source files in the caliper runtime lib
 include_directories(${CMAKE_CURRENT_BINARY_DIR})
+include_directories("/g/g92/marathe1/catalyst/local/include") 
+include_directories("/g/g92/marathe1/geopm/install-ecp/include/") 
+include_directories("/g/g92/marathe1/work/ecp/software/catalyst/Caliper/include/caliper") 
 
 set(CALIPER_SERVICES_SRC_ROOT_DIR ${CMAKE_CURRENT_SOURCE_DIR})
 
@@ -74,6 +77,7 @@ if (CALIPER_HAVE_SAMPLER)
 endif()
 add_subdirectory(timestamp)
 add_subdirectory(statistics)
+add_subdirectory(geopm)
 if (CALIPER_HAVE_DYNINST)
   add_subdirectory(symbollookup)
   add_subdirectory(instlookup)
