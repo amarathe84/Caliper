@@ -17,4 +17,3 @@ set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -DDEBUGLEVEL=2")
 
 add_service_sources(${CALIPER_GEOPM_SOURCES})
 add_caliper_service("geopm")
-
