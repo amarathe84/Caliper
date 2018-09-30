@@ -18,9 +18,8 @@ foreach(app ${CALIPER_TEST_APPS})
   add_executable(${app} ${app}.cpp)
   target_link_libraries(${app} caliper)
 endforeach()
-
+cmake_minimum_required(VERSION 3.5)
 target_link_libraries(cali-throughput-pthread
-  caliper-tools-util
-  Threads::Threads)
+  caliper-tools-util)
 
 add_subdirectory(ci_app_tests)
