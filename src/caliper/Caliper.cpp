@@ -119,6 +119,7 @@ namespace
 
         // Don't delete global data, some thread-specific finalization may occur after this point
         // Caliper::release();
+
     }
 
     // --- Siglock
